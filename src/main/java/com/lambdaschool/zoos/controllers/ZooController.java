@@ -24,7 +24,7 @@ public class ZooController
      produces = {"application/json"})
     public ResponseEntity<?> listAllZoos()
     {
-        return new ResponseEntity<>(zooService.findall(),
+        return new ResponseEntity<>(zooService.findAll(),
                 HttpStatus.OK);
     }
 
