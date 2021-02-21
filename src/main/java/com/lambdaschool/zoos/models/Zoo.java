@@ -1,4 +1,6 @@
 package com.lambdaschool.zoos.models;
 
-public class Zoo {
+public class Zoo
+{
+    
 }
