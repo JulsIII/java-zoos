@@ -48,7 +48,7 @@ public class ZooServiceImpl implements ZooService
         if (zoo.getZooid() != 0)
         {
             Zoo oldZoo = zoorepos.findById(zoo.getZooid())
-                    .orElseThrow(() -> EntityNotFoundException("Zoo id " + zoo.getZooid() + " not found!"));
+                    .orElseThrow(() -> new EntityNotFoundException("Zoo id " + zoo.getZooid() + " not found!"));
 
             newZoo.setZooid(zoo.getZooid());
         }

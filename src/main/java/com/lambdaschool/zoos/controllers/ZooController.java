@@ -50,11 +50,11 @@ public class ZooController
         newZoo = zooService.save(newZoo);
 
         HttpHeaders responseHeaders = new HttpHeaders();
-        URI newRestaurantURI = ServletUriComponentsBuilder.fromCurrentRequest()
+        URI newZooURI = ServletUriComponentsBuilder.fromCurrentRequest() //newRestaurantURI old code
                 .path("/{zooid}")
                 .buildAndExpand(newZoo.getZooid())
-                .toURI();
-        responseHeaders.setLocation(newRestaurantURI);
+                .toUri();
+        responseHeaders.setLocation(newZooURI);
 
         return new ResponseEntity<>(null,
                 responseHeaders,

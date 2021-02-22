@@ -1,4 +1,6 @@
 package com.lambdaschool.zoos.views;
 
-public interface JustTheCount {
+public interface JustTheCount
+{
+    int getCount(); //not used
 }
